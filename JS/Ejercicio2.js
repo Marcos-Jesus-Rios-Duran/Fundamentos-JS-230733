@@ -1,160 +1,213 @@
-// tippn de datos en JS
-
-//1.- Undifined diferente de (null)
-console.warn("--- Tipo de Dato UNDEFIEND");
+// undifined CUANDO UNA VARIEBLE ES CR4EADO PERO NO INCIALISADA (null)
+console.warn("--- Tipo de dato UNDIFINED")
 let cliente;
-console.log(`El cliente es ${cliente}`); // ALT+96 PARA 96 ``
-console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
+console.log(`El cliente es: ${(cliente)}`);
+console.log(`El tipo de dato de la bvariable cliente es: ${typeof(cliente)} ` );
 
-cliente= "Marcos Jesus";
-console.log(`El cliente es ${cliente}`);
-console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
+cliente="Juan Romero"
+console.log(`El cliente es: $(cliente)`);
+console.log(`El tipo de dato de la variable cliente es:  ${typeof(cliente)}`);
 
-cliente=230733
-console.log(`El cliente es ${cliente}`);
-console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
+cliente= 19227
+console.log(`El clientre es: $(cliente) `)
+console.log(`El tipo de dato de la variable cliente es  ${typeof(cliente)}`);
 
-//Undefined
+console.log(`El cliente a realizado `);
 
-//2 Bollean
 
-console.warn("--Tipo de dato: BOOLEAN( Boleano- True/False)")
-let esPremium="No lo sé";
-console.log(`Es el cliente Premium ${esPremium}`)
-console.log(`El tipo de dato ede la variable esPremium es:  ${typeof(esPremium)}`)
-console.log(`Asignado el valor \"true" a la variable.`) 
+//bolean-boleanos- TRUE/FALSE 
+
+console.warn("---Tipo de dato : BOOLEAN (boleano - true/false)");
+let esPremium="No lo se";
+console.log(`¿Es el cliente premium?  ${esPremium}`);
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}` );
+
+console.log("Asignando el valor true a la variable.")
 esPremium=true
-console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`)
-console.log(`¿Es el cliente Premium? : ${esPremium}`)
-console .log("Cambiando el valor de esPremium a false")
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+
+console.log("Asignando el valor true a la variable.")
+esPremium=true
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+
+console.log(`¿Es el cliente Premium? : ${esPremium}` );
+console.log("Cambiando el valor de esPremium a false")
 esPremium=0;
-// 3.- number
+
+if (esPremium)
+    console.log("El cliente pago por usar su sevicio:")
+else
+console.log("El cliente recibe los sevicios gratuitos:")
+
+
+// numeros 
 var cantidad;
-let saldo_cuenta=-2500
 const costo_producto= 10.50
+let saldo_cuenta=2500.0
 let monto_transaccion;
-console.warn("--- Tipo de Dato -NUMBER (Numeros, positivos, negativos, decimales, flotantes)")
-console.log(`tu saldo eal dia de hoy es de : ${saldo_cuenta}, (tipo de Dato = ${typeof(saldo_cuenta)})`)
-cantidad = 8;
-console.log(`Has elegido comprar: 4 ${cantidad} de producto.`)
-console.log(`El importe total de la compra es de : ${(cantidad*costo_producto)}`)
-saldo_cuenta=saldo_cuenta-(cantidad*costo_producto);
-console.log(`Tu nuevo saldo es ${saldo_cuenta}`);
-// El cliente raliza un monto un abono de 1500
-monto_transaccion=1500;
-console.log(`Tu abono de : ${monto_transaccion} ha sido receibido, tu nuevo saldo es de :  ${saldo_cuenta+monto_transaccion}`)
 
-//  4. STRING (cadena de caracteres)
-const alumno = "Marcos Jesus Rios Duran";
+console.warn("--- Tipo de dato - NUMBER (Numeros, positivos, negativos, decimales, flotantes)");
+console.log(`Tu saldo al dia de hoy es de: ${saldo_cuenta} Tipo de dato= ${typeof(saldo_cuenta)}`);
+cantidad=0;
+console.log(`Has elegido comprar ${(cantidad)} de productos`);
+console.log(`El importe total de la compra es:  ${(cantidad, costo_producto)}`)
+saldo_cuenta=saldo_cuenta- (cantidad,costo_producto);
+console.log(`Tu nuevo saldo es de : ${saldo_cuenta} ` )
+
+monto_transaccion=2500;
+console.log(`Tu bono de : ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${saldo_cuenta,monto_transaccion}` );
+
+
+//STRING cadena de crarcteres 
+const alumno = "Brandon Leon Cabrera"
 let producto;
-console.warn("--- Tipo de dato - STRING (Cadena de caracteres)")
-console.log (`El nobre del alummno es  ${alumno}, que es de tipo de dato ${typeof(alumno)}` )
-
-// inicialisamos el valor de lavariable producto
-producto="MONITOR 20\" FULL HD"
-console.log(`El nombre del producto es ${producto}, que es de tipo ${typeof(producto)} `)
-
-console.log(`Más adelante podremos transformar el contenido de los STRING usando metodos y funciones especificas, como comvertir su valor a mayusulas: ${alumno} => ${alumno.toUpperCase()}`)
-console.log(`0 en su defecto a minusculas: ${producto}=> ${alumno.toLowerCase()}`)
-
-// 5. TIPO DE DATO BIGINT (un numero de mayor amplitud)
-
-const numBig=1234567890;
-const numBig2=12345678901234567890;
-let numBig3=12345678901234567890134567890;
-let numBig4=1234567890123456789012345678901234567890;
-// el numero que pone punto decimales una e+numero
-console.warn("--- Tipo de dato - BIGINT (numero de mayor amplitud)")
-
-console.log(`El primer experimento de un numero  grande es: ${numBig}, que si es soportado por NUMBER y su tipo de dato es: ${typeof(numBig)}`)
-console.log(`El segundo experimento de un numero  grande es: ${numBig2}, que si es soportado por NUMBER y su tipo de dato es: ${typeof(numBig2)}`)
-console.log(`El tercer experimento de un numero  grande es: ${numBig3}, que si es soportado por NUMBER pero perdiendo precision y su tipo de dato es: ${typeof(numBig3)}`)
-console.log(`El cuarto experimento de un numero  grande es: ${numBig4}, que si es soportado por NUMBER pero perdiendo precision y su tipo de dato es: ${typeof(numBig4)}`)
-
-let numBig5=BigInt(123456789012345678901234567890n);
-let numBig6=BigInt(1234567890123456789012345678901234567890n);
 
 
-console.log(`El quinto experimento de un numero  grande es: ${numBig5}, que si no es soportado por NUMBER perdiendo presicion y su tipo de dato es: ${typeof(numBig5)}`)
-console.log(`El sexto experimento de un numero  grande es: ${numBig6}, que si no es soportado por NUMBER perdiendo precision  y su tipo de dato es: ${typeof(numBig6)}`)
+console.warn("--- Tipo de dato - STRING  (Cadeda de caracteres)");
+console.log(`El nombre del alumno es: ${alumno}, que es un tipo de dato ${typeof(alumno)}`);
 
-const nume=25;
-//console.log(`intentado realizar una suma entre un bigint y number, elresultado es: ${nume+numBig5} `) NO SE PUEDE SUMAR TIPOS DE DATOS DIFERENTES 
-console.log(`intentado realizar una suma entre un bigint y number, elresultado es: ${BigInt(nume)+numBig5} `)
+//inicialisamos el valor de la variable producto
 
-// TIPO DE DATO SYMBOL
-console.warn("--- Tipod de Dato SYMBOL (Simbolo)")
-const nu1 =5;
-const nu2 =5.0;
-const nu3 ="5";
-const nu4 ="5.0";
-const nu5= Symbol(5)
-const nu6= Symbol(5)
-const nu7= Symbol(5.0)
-const nu8= Symbol("5")
-const nu9= Symbol("5.0")
+producto= "MONITOR 20\" FULL HD"
+console.log(`El nombre del PRODUCTO es: ${typeof(producto)}`);
 
-// pruebaas comparativas
-console.log("¿Es 5 = 5.0?")
+//manipulando los string 
 
-if(nu1==nu2){
-    console.log("Se comporaro nu1 con nu2 determinando que tienen el mismo tipo de dato")
+console.log(`Mas adelante podre transformar el contenido de los STRING  usando los metodos y funciones especidficas, como convertir su valor amayuscula: ${alumno} => ${alumno.toUpperCase()}`);
+console.log(`O en su defecto a minusculas; ${producto} => ${producto.toLowerCase()}`);
 
-} else{
-    console.log("Se comporaro nu1 con nu2 determinando que no tienen el mismo tipo de dato")
+// 5. BIGINT (numero de dimensiones de mayor amplitud )
+console.warn("--- Tipo de Dato -BIGINT (Numero amplio)");
+const numeroGrande  = 1234567890
+const numeroGrande2 = 12345678901234567890
+let numeroGrande3 = 123456789012345678901234567890
+let numeroGrande4 = 1234567890123456789012345678901234567890
 
-}
-console.log("¿Es 5 = \"5\"?")
+console.log(`El primer experimento de un numero grande es: ${numeroGrande}, que si es soportado por NUMBER, y su tipo de dato es : ${typeof(numeroGrande)}`);
+console.log(`El segundo experimento de un numero grande es: ${numeroGrande2}, que si es soportado por NUMBER, y su tipo de dato es : ${typeof(numeroGrande2)}`);
+console.log(`El tercer experimento de un numero grande es: ${numeroGrande3}, que NO es soportado por NUMBER, y su tipo de dato es : ${typeof(numeroGrande3)}`);
+console.log(`El cuarto experimento de un numero grande es: ${numeroGrande4}, que NO es soportado por NUMBER, y su tipo de dato es : ${typeof(numeroGrande4)}`);
 
-if(nu1==nu3){
-    console.log("Se comporaro nu1 con nu3 determinando que tienen el mismo tipo de dato")
 
-} else{
-    console.log("Se comporaro nu1 con nu3 determinando que no tienen el mismo tipo de dato")
+numeroGrande3= BigInt(123456789012345678901234567890);
+console.log(`El quinto experimento de un numero grande es: ${numeroGrande3}, que ya  fue convertido a BigInt, y su tipo de dato es : ${typeof(numeroGrande3)}`);
 
-}
-console.log("¿Es 5 = \"5\"? usando === para comparar extrictamente el valor y el tipo de datos" )
+numeroGrande4= BigInt(1234567890123456789012345678901234567890);
+console.log(`El sexto experimento de un numero grande es: ${numeroGrande4}, que ya  fue convertido a BigInt, y su tipo de dato es : ${typeof(numeroGrande4)}`);
 
-if(nu1===nu3){
-    console.log("Se comporaro nu1 con nu3 determinando que tienen el mismo tipo de dato")
 
-} else{
-    console.log("Se comporaro nu1 con nu3 determinando que no tienen el mismo tipo de dato")
+//¿Se puden realizar operaciones matematicas entre un NUMBER y un BOGINT?
 
-}
-console.log("¿Es 5 = \"5.0\"?")
+const numero = 129;
+console.log(`Intendando realizar la suma de: numero + numeroGrande3, el resultado es :  ${BigInt(numero) + numeroGrande3}`)
 
-if(nu1==nu4){
-    console.log("Se comporaro nu1 con nu4 determinando que tienen el mismo tipo de dato")
+// 6. Symbol 
+console.warn("---Tipo de dato Symbol");
+const numero1= 5;
+const numero2=5.0;
+const numero3 = "5";
+const numero4= "5.0";
+const numero5 =Symbol(5)
+const numero6= Symbol(5)
+const numero7= Symbol(5.0);
+const numero8 =Symbol("5");
+const numero9=Symbol(5.0);
 
-} else{
-    console.log("Se comporaro nu1 con nu4 determinando que no tienen el mismo tipo de dato")
 
-}
-console.log("¿Es 5 = \"5.0\"usando === para comparar extrictamente ?")
+//Pruebas comparativas 
 
-if(nu1===nu4){
-    console.log("Se comporaro nu1 con nu4 determinando que tienen el mismo tipo de dato")
+console.log("Es 5 igual a 5.0?")
+if(numero1==numero2)
+    console.log("Se comparo numero1 con numero2, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero2, determinando que NO tienen el mismo valor")
 
-} else{
-    console.log("Se comporaro nu1 con nu4 determinando que no tienen el mismo tipo de dato")
 
-}
-console.log(`¿Es 5 === Symbol (5)?, antes de comparar anali<REMOS QUE TIPO DE DATOS SON: SIENDO NUMERO1 DE TIPO ${typeof(nu1)} y Numero 5 es de tipo ${typeof(nu5)} `)
+console.log("Es 5 = a \"5\"?")
+if(numero1==numero3)
+    console.log("Se comparo numero1 con numero3, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero2, determinando que NO tienen el mismo valor")
+////
+console.log("Es 5 === \"5\"")
+if(numero1===numero3)// Estructamente igual (Equidad) mismo valor, mismo dato
+    console.log("Se comparo numero1 con numero2, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero2, determinando que tienen el mismo valor pero NO el mismo tipo de dato")
 
-if(nu1==nu5){
-    console.log("Se comporaro nu1 con nu5 determinando que tienen el mismo tipo de dato")
+////
+console.log("Es 5 = a \"5.0\"")
+if(numero1==numero4)// Estructamente igual (Equidad) mismo valor, mismo dato
+    console.log("Se comparo numero1 con numero2, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero2, determinando que tienen el mismo valor pero NO el mismo tipo de dato")
 
-} else{
-    console.log("Se comporaro nu1 con nu5 determinando que no tienen el mismo tipo de dato")
+////Symbol
+console.log(`¿Es 5 === Symbol(5) , antes de compararlos utilizamos que tipo de dato son : siendo numero1 del tipo de dato : ${typeof(numero1)} y numero5 del tipo ${typeof(numero5)}?`)
+if (numero1===numero5)
+    console.log("Se comparo numero1 con numero5, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero5, determinando que tienen el mismo valor pero NO el mismo tipo de dato")
+///
+console.log(`¿Es 5 === Symbol(\"5\") , antes de compararlos utilizamos que tipo de dato son : siendo numero1 del tipo de dato : ${typeof(numero1)} y numero5 del tipo ${typeof(numero8)}?`)
+if (numero1===numero8)
+    console.log("Se comparo numero1 con numero8, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero8, determinando que tienen el mismo valor pero NO el mismo tipo de dato")
+///
+console.log(`¿Es 5 === Symbol(5.0) , antes de compararlos utilizamos que tipo de dato son : siendo numero1 del tipo de dato : ${typeof(numero1)} y numero9 del tipo ${typeof(numero9)}?`)
+if (numero1===numero9)
+    console.log("Se comparo numero1 con numero9, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero1 con numero9, determinando que tienen el mismo valor pero NO el mismo tipo de dato")
+////
+console.log(`¿Es 5 === Symbol(5) , antes de compararlos utilizamos que tipo de dato son : siendo numero1 del tipo de dato : ${typeof(numero5)} y numero9 del tipo ${typeof(numero6)}?`)
+if (numero5===numero6)
+    console.log("Se comparo numero1 con numero6, dterminando que tienen el mismo valor. ")
+else
+console.log("Se comparo numero5 con numero6,es la condicion symbol lo que lo hace unico ")
+////
 
-}
-console.log("¿Es 5 = Symbol(5) usando === para ser mas extricto al comparar?")
+// 7. NULL 
+console.warn("Tipo de dato NULL (Nulo o vacio)");
+//El tipo de dato malo se asigna cuando el sistema o el usuario saalen de la variabl pero prefiern dejarlo vacio, bajao su conacentimiento, a diferencia de DEFINED que su valor es desconocido
 
-if(nu1===nu5){
-    console.log("Se comporaro nu1 con nu3 determinando que tienen el mismo tipo de dato")
+let nobreUsuario = null;
+let passwordUsuario= null;
+let generoUusuario = null;
+let estatusRelacionSentimental = null;
+let fecha_UltimoPost;
 
-} else{
-    console.log("Se comporaro nu1 con nu5 determinando que no tienen el mismo tipo de dato")
+//Supongamos que estqamos  programando un face social, tipo Fcaebook en la que parte de la informacion se publicara en el perfil del usuario 
+//Si el usuario no ha iniciado sesion ene el dispositivo mobiol o en la apliccion we, puede djearcontenido e acceso publico y no existaira informacion para entrar 
+//En la HU que el usuasrio deseee logearse debra ingresar su numero de telefono y un acontraseña 
+//Supongamos que el usuario : Abril con correo electronico aguzm347@gmail desea ingresar con su contraseña 12345
 
-}
+nombreUsuario= "Brandon Leon"
+passwordUsuario="pas123"
+
+//en este momento de ejecucion del sisitema no sabemos su genero, ni su estatus de relacion sentimental 
+
+console.log(`El usuario: ${nobreUsuario} esta intentando logearse con una contraseña de ${passwordUsuario}`);
+
+//Lo que prosigue es que el sisitema contrajera los datos ingresado con la base de datos y en caso de que los datos sean correctos comensara la sesion en la plataforma actualizada 
+
+generoUusuario="M"
+estatusRelacionSentimental=null
+
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener accesoa  su información de perfil podemos deducir que es del género ${generoUusuario} y que su estatus de relación es ${estatusRelacionSentimental} y su última publicación la realizó el: ${fecha_UltimoPost}`)
+
+//comporando nulll vs undefined
+//undefined y null tienen el mismo valor ,no tienen el m ismo tipo de dato
+console.log("comparacion de la equidad entre undefined y null:");
+
+console.log(
+    fecha_UltimoPost == estatusRelacionSentimental ?
+       "ambas variables tienen el  mismo valor":
+        "las variables no tienen el mismo valor");
+
+console.log("comparacion de la equidad entre undefined y null:");
+
+console.log(fecha_UltimoPost === estatusRelacionSentimental ?
+"ambas variables tienen el  mismo valor y el mismo dato":
+"las variables  tienen el mismo valor,pero no el mismo dato");
