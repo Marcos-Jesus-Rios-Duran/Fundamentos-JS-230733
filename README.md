@@ -9,10 +9,10 @@ un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar 
 |No.|Descripción|Potenciador| Estatus|
 |--|--|--|--|
 |1. | Metodologia de Evaluacion |1|Finalizada ✅|
-|2. | Inicializacion del Proyecto de Fundamentos de Js |8|Finalizada ✅|
-|3. | Practica 03: Declaracion de variables en JS |8|Activo|
-|4. | Tipos de Datos en JS|por Definir|No concluido|
-
+|2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
+|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
+|4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
+|5.|Introducion a Objetos||Activa |
 ***
 ### Autor
 Creado por : **Marcos Jesús Rios Duran** /[@Marcos-Jesús-Ríos-Durán](https://github.com/Marcos-Jesus-Rios-Duran)

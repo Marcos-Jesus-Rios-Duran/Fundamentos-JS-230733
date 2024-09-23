@@ -211,3 +211,11 @@ console.log("comparacion de la equidad entre undefined y null:");
 console.log(fecha_UltimoPost === estatusRelacionSentimental ?
 "ambas variables tienen el  mismo valor y el mismo dato":
 "las variables  tienen el mismo valor,pero no el mismo dato");
+// 8. FUNCTION (Funciones)
+console.warn("--- Tipo de Dato FUNCTION (Función)")
+// Declaramos una funcion que nos permita recibir un paramento en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta función la asignamos a una constante.
+const saludar =  function(nombre){return `Hola, ${nombre}!`}
+// Invocamos a la función declarada
+console.log(saludar('Marco'));
+//Y que tipo de dato tiene esta constante
+console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`)
