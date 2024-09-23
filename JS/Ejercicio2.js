@@ -59,7 +59,7 @@ console.log(`Tu bono de : ${monto_transaccion} ha sido recibido, tu nuevo saldo 
 
 
 //STRING cadena de crarcteres 
-const alumno = "Brandon Leon Cabrera"
+const alumno = "Marcos Jesus"
 let producto;
 
 
@@ -183,7 +183,7 @@ let fecha_UltimoPost;
 //En la HU que el usuasrio deseee logearse debra ingresar su numero de telefono y un acontraseña 
 //Supongamos que el usuario : Abril con correo electronico aguzm347@gmail desea ingresar con su contraseña 12345
 
-nombreUsuario= "Brandon Leon"
+nombreUsuario= "Marcos Jesus"
 passwordUsuario="pas123"
 
 //en este momento de ejecucion del sisitema no sabemos su genero, ni su estatus de relacion sentimental 
@@ -216,6 +216,6 @@ console.warn("--- Tipo de Dato FUNCTION (Función)")
 // Declaramos una funcion que nos permita recibir un paramento en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta función la asignamos a una constante.
 const saludar =  function(nombre){return `Hola, ${nombre}!`}
 // Invocamos a la función declarada
-console.log(saludar('Marco'));
+console.log(saludar('Marcos'));
 //Y que tipo de dato tiene esta constante
 console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`)
