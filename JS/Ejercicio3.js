@@ -1,6 +1,8 @@
-// repaso de objetos 
-const bg = "llenar gradient (11deg, rgba(2,0,36,1) 0%, rgba(9,121,1) 33%)";
+// Repaso de objetos 
+const bg = "linear-gradient(11deg, rgb(2,0,36) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 86%)";
+const style_console =`background:${bg}; color:white; border-radius:6px; padding:4px; font-size:1.0rem;`;
 console.warn("Practica 05: Repaso de Objetos en JavaScript");
+console.log("%c1.- Variables Independientes", style_console);
 
 // Variables independientes 
 let producto_nombre = "computadora ASUS gamer laptop 17*";
@@ -27,8 +29,9 @@ Imagen: ${producto_Imagen}, Tipo de dato: ${typeof(producto_Imagen)}
 Barcode: ${producto_Barcode}, Tipo de dato: ${typeof(producto_Barcode)} 
 Categoría: ${producto_categoria}, Tipo de dato: ${typeof(producto_categoria)}`);
 
-    //Ahora lo declaramos como un OBJETO
-    console.log();
+// Ahora lo declaramos como un OBJETO
+console.log("%c2.- Objeto ", style_console);
+
     let Producto=
     {
         Nombre:"Tenis Deportivos",
@@ -52,39 +55,88 @@ Categoría: ${producto_categoria}, Tipo de dato: ${typeof(producto_categoria)}`)
             console.log('Estatus:Agotado')
         else
         console.log(`Estatus: ${Producto_Stock} unidades disponibles`)
-
-        let Producto2 =
-        {
-            Clave:316,
-            Nombre:"Lentes para sol",
+        
+        let Producto2 = {
+            Clave: 316,
+            Nombre: "Lentes para sol",
             Marca: "Oakley",
-            Modelo:"QNTM kato",
+            Modelo: "QNTM kato",
             Precio: 6829.00,
             Disponibilidad: true,
             Stock: 5,
-            SKU:"DO9481D-0356",
+            SKU: "DO9481D-0356",
             Imagen: "../assets/Products/sungglasses/katoRed.png",
-            Barcode:888392491626,
-            Categorias:["Deportes","Lentes","Nombre","Accesorios"]
-        }
-        let comprador ={
-            Clave :3216,
-            Nombre :"Marcos",
-            Apellido : "Rios ",
-            Tipo : "Frecuente",
+            Barcode: 888392491626,
+            Categorias: ["Deportes", "Lentes", "Nombre", "Accesorios"]
+        };
+        
+        let comprador = {
+            Clave: 3216,
+            Nombre: "Marcos",
+            Apellido: "Rios",
+            Tipo: "Frecuente",
             correo: "mrcojdr25@gmail.com",
-            Pais_Origen : "México",
-            Saldo : 140000.00
-        }
-        let Pedido={
-            Producto_clave:316,
+            Pais_Origen: "México",
+            Saldo: 140000.00
+        };
+        
+        let Pedido = {
+            Producto_clave: 316,
             comprador_clave: 3216,
             cantidad: 2,
-            Estatus: "Carrito de compras"
-        }
-    // en base a los tres objetos neccesitamos calcular el costo de la compra y si alcanza con su saldo para comprar con su saldo a favor 
-    let {Precio:Producto_Precio}=Producto2
-    let {Pedido_Cantidad : Cantidad}=   Pedido
-    let { Saldo_Actual : Saldo}=comprador
+            Estatus: "Carrito de compras",
+            TipoPago: "Tarjeta"
+        };
+        console.log ("%c3.- Destructuramiento de datos",style_console)
+        // Calcular el costo de la compra y verificar el saldo
+        let Precio = Producto2.Precio;
+        let Cantidad = Pedido.cantidad;
+        let SaldoActual = comprador.Saldo;
+        
+        let Costo_Compra = Precio * Cantidad;
+        console.log(`El cliente ha agregado a su carrito de compras ${Cantidad} unidades, con un costo total de: ${Costo_Compra}`);
+        
+        if (Costo_Compra <= SaldoActual) {
+            console.log("El cliente tiene saldo suficiente");
+        } else {
+            console.log("El cliente no tiene saldo suficiente");
+        }        
+        //Actualizar el valor de los defaultTypeResolver.
+        console.log ("%c4.- Actualización de los valores de las propiedades de un objeto",style_console)
 
-    console.log(`El cliente ha agregado a su carrito de compras ${Pedido_Cantidad} unidades, con un costo total de ${(Pedido_Cantidad*Producto_Precio)}   `)
+        console.log(`El objeto actualmente tiene los siguients valores: `)
+        console.log(JSON.stringify( Producto2,null,2))
+        console.log (`Por cuestiones de infraccion el costo del producto ha cambiado y debe de ser actualizado... de &6,829.00 a 6915.00`)
+        Producto2.Precio=6915.00;
+        console.log("Los nuevos valores del producto son :")
+        console.log(Producto2)
+
+        // ¿Puedo cambiar no solo el valor sino tambien el tipo de dato de un objeto en JS?
+        console.log("----------------------------------------------------")
+        console.log("El objeto tiene los actualmente los siguientes valores")
+        let tipoDisponibilidad= typeof(Producto2.Disponibilidad)
+        console.log(`El tipo de dato de la disponibilidad es: ${tipoDisponibilidad}`)
+        console.log(JSON.stringify(Producto2,null,2))
+        Producto2.Disponibilidad= "si"
+        let nuevoTipoDisponibilidad =typeof(Producto2.Disponibilidad)
+        console.log(Producto2)
+        console.log(`El nuevo tipo de dato de la disponibilidad es: ${typeof(nuevoTipoDisponibilidad)}`)
+        //Agregar nuevas propiedades al objeto
+
+        console.log("%c5.- Agregar nuevas propiedades al objeto", style_console);
+        // para agregar una nueva prpiedad utlizaremos el nombre del objeto los corchetes [] y la nueva propiedad on su valor pordefecto.
+        console.log("Los datos actuales del comprador son:")
+        console.log(comprador)
+        comprador['Direccion'] = "Av. Benito Juárez NO. 1525, Interior 4D, Xicotepec de Júarez Puebla, México "
+        comprador['Tipo']= "Nuevo Cliente"
+        comprador['ActividadReciente']=true
+        comprador['TotalCompras']=3516.25
+        console.log("Despues de haber agregado la spropiedades Direccion,Tipo, ActividadReciente y TotalCompras ....")
+        console.table(comprador)
+
+        //Eliminar propiedades existentes de un Objeto
+        console.log("%c6.- Eliminar  propiedades existentes de un objeto", style_console);
+        console.log("La estructura y valores del objeto PEDIDO son previos a la modificación :")
+        console.table(Pedido)
+        delete Pedido.TipoPago;
+        console.table(Pedido)
