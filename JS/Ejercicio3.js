@@ -82,7 +82,7 @@ console.log("%c2.- Objeto ", style_console);
         };
         
         let Pedido = {
-            id:3456,
+            ID:3456,
             Producto_clave: 316,
             comprador_clave: 3216,
             cantidad: 2,
@@ -227,3 +227,27 @@ console.log("%c2.- Objeto ", style_console);
         console.log("Consultamos este nuevo Objeto Venta ")
         console.table(Venta)
         
+        //union de objetos usando SPREAD operator para evitar la perdida de informacion con objetos que comparten el mismo noimbre en sus propiedas
+
+        console.log("%c11.- Unión de objetos usando el SPREAD OPERATOR(...)",style_console);
+
+
+        //Parchamos el error, reiniciando el valor del producto, ID el original
+        //Producto.ID=100;
+        
+        console.table(Producto)
+        console.table(comprador)
+        console.table(Pedido)
+        const Venta2= {
+            producto:{...Producto},
+            comprador:{...comprador},
+            pedido:{...Pedido}
+        }
+        console.log("Fusionamos los 3 objetos en uno nuevo, sin perdida de de información")
+        console.log(Venta2)
+        console.table(Venta2)
+
+        console.log("%c12.- Mutabilidad POST Unión de objetos",style_console)
+        // vamos a verificar el status de mutabilidad de los objetos 
+        console.log("vamos a verificar el estatus de mutabilidad del objeto PEDIDO")
+        console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Pedido)}`)
