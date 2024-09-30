@@ -8,7 +8,7 @@ un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar 
 ## Historial de practicas
 |No.|Descripción|Potenciador| Estatus|
 |--|--|--|--|
-|1. | Metodologia de Evaluacion |1|Finalizada ✅|
+|1. | Metodologia de Evaluacion |1|✅Finalizada |
 |2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
 |3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
 |4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
