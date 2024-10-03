@@ -105,3 +105,91 @@ console.log(`mesesAnio es un arreglo de tamaño ${mesesAnio.length} `)
 console.log(`arregloMixto  es un arreglo de tamaño: ${matriz.length}` )
 console.log(`mmmmm, eso me da el el tamaño de numero de filas pero como saber el numero de columnas `)
 console.log(`La matriz es  regular tiene un numero de ${matriz[0].length}`)
+console.log(`Y para la matrizIrregular?`)
+
+//Para saber la dimensión de una matriz irregular podemos hacer el uso del ciclo
+
+let numeroFilas=matrizIrregular.length
+for(let i = 0; i < numeroFilas; i++)
+    console.log(`La longitud de la fila ${[i]} es = ${matrizIrregular[i].length}`)
+
+
+
+console.log("%c5.-  Agregar un nuevo elemento a un arreglo (ÚSH)",style_console)
+
+let estudiantes =["Angel Rufino", "Idai Vargas", "Daniel Bravo", "Esther Gonzalez", "Ailton Airtiaga" ]
+console.log("Los elementos del actuales del arreglo son:")
+console.table(estudiantes)
+console.log("agregamos un nuevo tipo de datos llamado Abril Guzman")
+estudiantes.push("Abril Guzman")
+console.log("Despues de agregar los elementos del areglo son :")
+console.table(estudiantes)
+console.log("¿que ása con los arreglos mixtos? ")
+console.log("Actualmente arrgeloMixto tiene los siguientes elementos:")
+console.table(arregloMixto)
+console.log("Agregemos la palabra \"hola\" como nuevo elemento")
+console.log("Tmabien agregamos el numero -123456789123456746879123.112678797545 siendo este un Bigint" )
+arregloMixto.push("hola")
+arregloMixto.push(BigInt(-123456789123456746879123.112678797545 ))
+console.log("Despues de estas dos operaciones el arrgelo queda de la siguiente manera:")
+console.table(arregloMixto)
+
+console.log("%c6.- Agregar un nuevo elemento a un arreglo (UNSHIFT) en la posicion inicial ",style_console)
+console.table(estudiantes)
+console.log("Ahora agregamos a Abishaí flores, el comienzo del arreglo.")
+estudiantes.unshift("Abishaí Flores")
+console.log("Ahora la lista actual es:")
+console.table(estudiantes)
+console.log("%c7.- Eliminar el elemento de un arreglo en la ultima posición (POP)",style_console)
+
+console.log("El arreglo tiene los siguientes elementos:")
+console.table(estudiantes)
+console.log("Para este caso eliminaremos a Abril Guzman, es la ultima posicion")
+estudiantes.pop();
+console.log("Despues de eliminar el elemento el arreglo quedo de la siguiente manera:")
+console.table(estudiantes)
+
+
+console.log("%c8.- Eliinar el elemento de un arreglo en en la primera posicion (SHIFT)",style_console)
+console.log("Para este caso elinaremos  Abishaí Flores que es el primero de la lista ")
+console.table(estudiantes)
+estudiantes.shift();
+console.log("ahora despues eliminar queda asi ")
+console.table(estudiantes)
+console.log("%c9.- Dividir un arreglo en un uno nuevo con posiciones definidas (SPLICE)",style_console)
+//CUANDO LA POSICION SPLICE RECIBE UN PARAMETRO ELIMINARA LOS ELEMENTOS DE ESTA POSICION EN ADELANTE
+estudiantes.splice(2)
+console.table(estudiantes)
+estudiantes.push("Zyanya Zacatenco")
+estudiantes.push("Tania Ibarra")
+estudiantes.push("Juvenal Viveros")
+estudiantes.push("Marcos Rios")
+estudiantes.push("Jonathan Baldemar")
+console.log("Se han agregado 5 nuevos estudiantes, por lo que el arreglo es :")
+console.table(estudiantes)
+console.log("Ahora tenemos los elementos suficientes para usar splice en las posiciones (3,5)")
+estudiantes.splice(3,2)
+console.log("Resultado:")
+console.table(estudiantes)
+console.log("Insertamos a \" Antonio Ocpaco \" entre la posicion 0 y 1 del array")
+//SPLICE sirve tambien para insertar elementos en posiciones especificcas, ahora insertaremos a: Antonio Ocpaco entre Angel e Idai
+estudiantes.splice(1,0,"Antonio Ocpacco")
+console.log("Resultado:")
+console.table(estudiantes)
+
+console.log("Ahora reemplazaremos el valor de \"Angel Rufino \" Con brandon")
+estudiantes.splice(0,1,"Brandom")
+console.log("Resultado:")
+console.table(estudiantes)
+
+console.log("%c10.- Metodos para la manipulacion de arreglos inmutables",style_console)
+let signosZodiacales= ["Aries","Tauro", "Geminis","Cancer","Leo","virgo","Libra","Escorpio","Sagitario","capricornio","Acuario","Piscis"]
+//Destructuración de Arreglo
+let[signo1,,signo3,,,,signo7,,,,]=signosZodiacales
+console.log(`El primer signo Zodiacal es: ${signo1}`)
+console.log(`El segundo signo Zodiacal es: ${signo3}`)
+console.log(`El segundo signo Zodiacal es: ${signo7}`)
+//Congelamos el objeto de zignosZodiacales
+Object.freeze(signosZodiacales);
+
+
