@@ -257,8 +257,8 @@ console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Pedido)}` 
 console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Pedido)}` );
 
 console.log("Vamos a verificar el estatus de mutabilidad del objeto COMPRADOR")
-console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Comprador)}` );
-console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Comprador)}` );
+console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(comprador)}` );
+console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(comprador)}` );
 
 console.log("Vamos a verificar el estatus de mutabilidad del objeto PRODUCTO")
 console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Producto)}` );
@@ -267,4 +267,4 @@ console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Producto)}` )
 // Modificamos la estructura de producto, agregando una nueva propiedad
 Producto['isLegacy']=false;
 console.log(Producto)
-console.log(Venta2);
+console.table(Venta2);
