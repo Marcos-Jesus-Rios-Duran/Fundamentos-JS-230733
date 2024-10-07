@@ -11,8 +11,9 @@ un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar 
 |1. | Metodologia de Evaluacion |1|✅Finalizada |
 |2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
 |3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
-|4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
-|5.|Introducion a Objetos||Activa |
+|4.|Ejercicio 02: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
+|5.|ejercicio03: Objetos|19|✅Finalizada |
+|6|Ejercicio 04: Objetos|indefinida|😊Activa|
 ***
 ### Autor
 Creado por : **Marcos Jesús Rios Duran** /[@Marcos-Jesús-Ríos-Durán](https://github.com/Marcos-Jesus-Rios-Duran)
