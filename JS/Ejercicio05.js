@@ -132,3 +132,100 @@ switch (true) {
 }}
 
 console.log(`Dado que nacio en el año ${fechaNacimiento} Tu generación es: ${generacion}`);
+
+
+console.log("%c8.- Ciclo Condicionales que se ejecuta al menos una vez- (DO While)", style_console);
+
+// SIMULEMOS UNA LISTA DE EPISODIOS DE UNA TEMPORADA 
+let episodios = [
+    "Episodio 1: SIN RUMBO",
+    "Episodio 2: La revelación",
+    "Episodio 3: Alma sin rumbo",
+    "Episodio 4: A lo lejos",
+    "Episodio 5: Acá entre nosotros"
+];
+
+let indice = 0;
+let continuarViendо = true; // Esta variable simula la decisión del usuario de continuar viendo
+
+do {
+    console.log(`Reproduciendo ${episodios[indice]}`);
+    // Simulamos la reproducción del episodio
+    indice++;
+
+    // Simulamos una pregunta al usuario si desea seguir viendo
+    if (indice < episodios.length) {
+        continuarViendо = confirm("¿Deseas seguir viendo?"); // Simula una pregunta al usuario
+    } else {
+        continuarViendо = false; // No hay más episodios
+    }
+} while (continuarViendо);
+
+// Ciclo para recorrer objetos iterables como mapas, arreglos, cadenas y conjuntos de datos
+console.log("%c9.- Ciclos para recorrer elementos finitos  ( )", style_console);
+
+let seriesTrending = [
+    { nombre: "The Witcher", temporadas: 3, TotalViewers: "1.5M", TotalReprods: "3.0M" },
+    { nombre: "Stranger Things", temporadas: 4, TotalViewers: "6.5M", TotalReprods: "10M" },
+    { nombre: "The Boys", temporadas: 3, TotalViewers: "3.2M", TotalReprods: "3.0M" },
+    { nombre: "Another Series", temporadas: 3, TotalViewers: "1.5M", TotalReprods: "3.0M" }
+];
+
+for (let serie of seriesTrending) {
+    console.log(`Serie: ${serie.nombre}, Temporadas: ${serie.temporadas}`);
+}
+
+try {
+    // Aquí 'serie' no estará definida, ya que su alcance es dentro del ciclo for
+    console.log(`La última serie fue: ${serie.nombre}`); 
+} catch (error) {
+    console.log("Mensaje de error: " + error.message);
+}
+
+console.log("%c10.- CICLOS PARA RECORRER LAS PROPIEDADES DE ELEMENTOS FINITOS (FOR-IN)", style_console);
+// USANDO CADA FOR...IN para recorrer cada serie
+for (let i in seriesTrending) {
+    console.log(`Serie ${parseInt(i) + 1}:`); // Se corrige para mostrar el índice correctamente
+    for (let propiedad in seriesTrending[i]) {
+        console.log(`${propiedad}: ${seriesTrending[i][propiedad]}`);
+    }
+    console.log(".........");
+}
+
+console.log("%c11.- Ciclos ininterrmpidos para cada uno de elementos del arreglo- (FOR EACH)",style_console);
+//Lista de series de tv trnding con temporadas, viewers y reproducciones
+let seriesTrendig2=[
+    {nombre:"The witcher",temporadas:3,totalViewers:"8000000",totalReprods:"25000000"},
+    {nombre:"stranger Things",temporadas:4,totalViewers:"12000000",totalReprods:"4000000"},
+    {nombre:"The Boys",temporadas:3,totalViewers:"7000000",totalReprods:"22000000"},
+    {nombre:"Loki",temporadas:2,totalViewers:"9000000",totalReprods:"3000000"},
+    {nombre:"Succession",temporadas:4,totalViewers:"6000000",totalReprods:"18000000"},
+    {nombre:"The witcher Dead",temporadas:16,totalViewers:"16000000",totalReprods:"36000000"}
+];
+//Usando forEach para recorrer cada serie y calcular la calificacion
+seriesTrendig2.forEach((serie,indix)=>{
+    let calificacion=(serie.reproducciones/serie.viewers).toFixed(2);
+    //Calcula la calificacion y la redondea a 2 decimales
+console.log(`serie: ${indix+1}:`);
+console.log(`Nombre: ${serie.nombre}`);
+console.log(`Tempodaras: ${serie.temporadas}`);
+console.log(`Viewers: ${serie.viewers}`);
+console.log(`reproducciones: ${serie.reproducciones}`);
+console.log(`calificacion: ${calificacion}`);
+//Muestra la calificacion
+console.log(`---------------------------`);
+});
+//Usando Filter para filtrar, y map para transformar la informacion
+//Lista de series que queremos verificar
+let seriesDeseadas=["The walking dead","The Boys","Loki"];
+//Usando map e includes para filtrar y obtener los nombres de series con 3 temporadas
+let seriesConTresTemporadas=seriesTrendig2
+.filter(serie=>serie.temporadas<=3)
+//filtramos las series que tienen 3 temporadas
+.map(serie=>serie.nombre)
+//Obtenemos solo los nombres de esas series
+.filter(nombre=>seriesDeseadas.includes(nombre));
+//Filtramos las que estan en la lista de series deseadas
+//Mostrar los resultados
+console.log("series con 3 temporadas que estan en la lista deseada:");
+console.log(seriesConTresTemporadas);
