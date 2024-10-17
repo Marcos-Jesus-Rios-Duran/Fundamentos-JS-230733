@@ -8,12 +8,13 @@ un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar 
 ## Historial de practicas
 |No.|Descripción|Potenciador| Estatus|
 |--|--|--|--|
-|1. | Metodologia de Evaluacion |1|✅Finalizada |
-|2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
-|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
-|4.|Ejercicio 02: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
-|5.|ejercicio03: Objetos|19|✅Finalizada |
-|6|Ejercicio 04: Objetos|indefinida|😊Activa|
+|1. | Metodologia de Evaluacion |1|✔Finalizada |
+|2.|Inicialización del Proyecto de Fundamentos de Js|5| ✔Finalizada|
+|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✔Finalizada|
+|4.|Ejercicio 02: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✔Finalizada|
+|5.|ejercicio03: Objetos|19|✔Finalizada |
+|6|Ejercicio 04: Objetos|18|✔Finalizada|
+|7|Ejercicio 05:Repaso de ciclos y de sentencias de control|16|✔Finalizada|
 ***
 ### Autor
 Creado por : **Marcos Jesús Rios Duran** /[@Marcos-Jesús-Ríos-Durán](https://github.com/Marcos-Jesus-Rios-Duran)

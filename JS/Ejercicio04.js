@@ -16,7 +16,7 @@ console.table(mesesAnio)
 
 //acceder a los valores del arreglo de datos para acceder solo a el valor solo basta con indicar la posicion del dato que queremos dentro de los lmites establecidos, siendo el limite inferior 0 y el limite superior -1
 
-console.log("c2.- Leer o Recuperar los datos del array ",style_console)
+console.log("%c2.- Leer o Recuperar los datos del array ",style_console)
 console.log(`El primer mes del año es : ${mesesAnio[0]}`)
 console.log(`el ultimo mes del año es : ${mesesAnio[mesesAnio.length-1]}`)
 // NO SE PUEDEN ACCEDER A ELEMENTOS CON POSICIONES NEGATIVAS O SUPERIORES A EL TAMAÑO DEL ARRAY 

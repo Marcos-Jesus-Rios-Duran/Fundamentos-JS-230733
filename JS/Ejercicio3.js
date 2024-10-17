@@ -72,7 +72,7 @@ console.log("%c2.- Objeto ", style_console);
         };
         
         let comprador = {
-            Clave: 3216,
+            ID: 3216,
             Nombre: "Marcos",
             Apellido: "Rios",
             Tipo: "Frecuente",
@@ -238,33 +238,39 @@ console.log("%c2.- Objeto ", style_console);
         console.table(Producto)
         console.table(comprador)
         console.table(Pedido)
-        const Venta2= {
-            producto:{...Producto},
-            comprador:{...comprador},
-            pedido:{...Pedido}
-        }
-        console.log("Fusionamos los 3 objetos en uno nuevo, sin perdida de de información")
-        console.log(Venta2)
-        console.table(Venta2)
-
         console.log("%c12.- Mutabilidad POST Unión de Objetos", style_console);
+        // Fusión de objetos manteniendo los IDs
+const Venta2 = {
+    producto: { ...Producto }, // Producto con todos sus datos
+    comprador: { ...comprador }, // Comprador con todos sus datos
+    pedido: { ...Pedido } // Pedido con todos sus datos
+};
 
+console.log("Fusionamos los 3 objetos en uno nuevo, sin pérdida de información");
+console.log(Venta2);
+console.table(Venta2);
 
+// Verificación de IDs en el objeto fusionado
+console.log("IDs en el objeto fusionado:");
+console.log(`ID del Producto: ${Venta2.producto.ID}`);
+console.log(`ID del Pedido: ${Venta2.pedido.ID}`);
+console.log(`ID del Comprador: ${Venta2.comprador.Clave}`);
 
-// Vamos a verificar el estatus de mutabilidad de los obetos
-console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO")
-console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Pedido)}` );
-console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Pedido)}` );
+// Vamos a verificar el estatus de mutabilidad de los objetos
+console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO");
+console.log(`¿Está el objeto de Pedido congelado? : ${Object.isFrozen(Pedido)}`);
+console.log(`¿Está el objeto de Pedido sellado? : ${Object.isSealed(Pedido)}`);
 
-console.log("Vamos a verificar el estatus de mutabilidad del objeto COMPRADOR")
-console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(comprador)}` );
-console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(comprador)}` );
+console.log("Vamos a verificar el estatus de mutabilidad del objeto COMPRADOR");
+console.log(`¿Está el objeto de Comprador congelado? : ${Object.isFrozen(comprador)}`);
+console.log(`¿Está el objeto de Comprador sellado? : ${Object.isSealed(comprador)}`);
 
-console.log("Vamos a verificar el estatus de mutabilidad del objeto PRODUCTO")
-console.log(`Esta el objeto de Pedido Congelado ? : ${Object.isFrozen(Producto)}` );
-console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Producto)}` );
+console.log("Vamos a verificar el estatus de mutabilidad del objeto PRODUCTO");
+console.log(`¿Está el objeto de Producto congelado? : ${Object.isFrozen(Producto)}`);
+console.log(`¿Está el objeto de Producto sellado? : ${Object.isSealed(Producto)}`);
 
 // Modificamos la estructura de producto, agregando una nueva propiedad
-Producto['isLegacy']=false;
-console.log(Producto)
-console.table(Venta2);
+Producto['isLegacy'] = false;
+console.log(Producto);
+console.table(Venta2); // Muestra el objeto fusionado nuevamente
+        
